@@ -14,6 +14,7 @@ import glob
 
 def main():
     server_path = get_server_path()
+    plugin_path = get_plugin_path()
     while True:
         print("---------------------------------------------------------")
         print("             Crinkle Cruft Hardcore mode                 ")
@@ -29,7 +30,7 @@ def main():
                 install_update_build_tools(server_path)
                 break
             elif answer == '2':
-                update_plugin(server_path)
+                update_plugin(plugin_path, server_path)
                 break
             elif answer == '3':
                 run_server(server_path)
@@ -85,6 +86,10 @@ def get_server_path():
     data = get_server_data()
     return data["server_path"]
 
+def get_plugin_path():
+    data = get_server_data()
+    return data["plugin_path"]
+
 def update_build_tools(current_ver, latest_ver, server_path):
     print("Checking for BuildTools Updates.")
     if latest_ver > current_ver:
@@ -120,10 +125,10 @@ def download_latest_build_tools(latest_ver, server_path):
     with open('server_info.json', 'w') as of:
         json.dump(data, of)
 
-def update_plugin(server_path):
+def update_plugin(plugin_path, server_path):
     print("Updating Plugin.")
     if os.path.isdir(server_path):
-        for file in glob.glob("maven_project/hardcore_stats/target/*.jar"):
+        for file in glob.glob(plugin_path + "/*.jar"):
             copy(file, server_path + "/plugins")
 
 def build_build_tools(server_path):
