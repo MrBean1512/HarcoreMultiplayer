@@ -5,6 +5,9 @@ import re
 import json
 import os
 
+#####################################
+# Check for BuildTools Update
+#####################################
 print("Checking for BuildTools updates")
 page = requests.get('https://hub.spigotmc.org/jenkins/job/BuildTools/lastStableBuild/')
 soup = BeautifulSoup(page.content, 'html.parser')
@@ -43,3 +46,8 @@ if latest_ver > current_ver:
             break
         if answer == 'n':
             break
+
+#####################################
+# Start Server
+#####################################
+

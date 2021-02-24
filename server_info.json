@@ -1,1 +1,5 @@
-{"installed_version": 124}
+{
+    "installed_version": 0,
+    "death_count": 0,
+    "player_death_events":[]
+}
