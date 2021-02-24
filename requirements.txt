@@ -1,0 +1,7 @@
+wget
+requests
+bs4
+re
+os
+json
+shutil
