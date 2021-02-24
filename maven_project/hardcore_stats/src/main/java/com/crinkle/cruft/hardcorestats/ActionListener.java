@@ -47,5 +47,9 @@ public class ActionListener implements Listener {
         {
             e.printStackTrace();
         }
+
+        // everbody to spectator
+        // wait 1 minute
+        // kill server
     }
 }

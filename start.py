@@ -122,7 +122,7 @@ def download_latest_build_tools(latest_ver, server_path):
     url = 'https://hub.spigotmc.org/jenkins/job/BuildTools/lastStableBuild/artifact/target/BuildTools.jar'
     wget.download(url, server_path + '/BuildTools.jar')
     data["installed_version"] = latest_ver
-    with open('server_info.json', 'w') as of:
+    with open(server_path + '/server_info.json', 'w') as of:
         json.dump(data, of)
 
 def update_plugin(plugin_path, server_path):
