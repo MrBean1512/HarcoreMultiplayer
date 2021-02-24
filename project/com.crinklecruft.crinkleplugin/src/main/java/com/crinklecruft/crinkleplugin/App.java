@@ -6,6 +6,7 @@ package com.crinklecruft.crinkleplugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import org.bukkit.scoreboard.*;
+import org.bukkit.event.entity.PlayerDeathEvent;
 
 public class App extends JavaPlugin {
     
@@ -34,12 +35,12 @@ public class App extends JavaPlugin {
     //scoreboard initializations will be handled here
     ///////////////////////////////////////////////////////////////////////////////////////////////////////
     //if this is called on a server that is not new, there's probably something wrong with the server
-    public void scoreboardInit() {
-        Scoreboard scoreboard = (getServer().getScoreboardManager().getMainScoreboard());
-        if (scoreboard.getObjective("CountDown") == null) {
-        //if the CountDown does not exist on the scoreboard...
-            getLogger().info("Crinkle scoreboard objective does not exist! Creating scoreboard objective CountDown...");
-            scoreboard.registerNewObjective("CountDown", "dummy", "Count_Down");
-        }
-    }
+    // public void scoreboardInit() {
+    //     Scoreboard scoreboard = (getServer().getScoreboardManager().getMainScoreboard());
+    //     if (scoreboard.getObjective("CountDown") == null) {
+    //     //if the CountDown does not exist on the scoreboard...
+    //         getLogger().info("Crinkle scoreboard objective does not exist! Creating scoreboard objective CountDown...");
+    //         scoreboard.registerNewObjective("CountDown", "dummy", "Count_Down");
+    //     }
+    // }
 }

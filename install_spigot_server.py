@@ -32,7 +32,7 @@ if latest_ver > current_ver:
             with open('server_info.json', 'w') as of:
                 json.dump(data, of)
             while True:
-                print('Would you like to (re)build BuildTools.jar? (y/n)\n>> ', end='')
+                print('\nWould you like to (re)build BuildTools.jar? (y/n)\n>> ', end='')
                 answer = input().lower()
                 if answer == 'y':
                     os.chdir('server')
@@ -43,9 +43,3 @@ if latest_ver > current_ver:
             break
         if answer == 'n':
             break
-
-
-    
-
-
-# https://hub.spigotmc.org/jenkins/job/BuildTools/lastStableBuild/artifact/target/BuildTools.jar

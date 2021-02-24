@@ -65,6 +65,12 @@ public class ActionListener implements Listener{
         }
     }
 
+    @Eventhandler
+    public void onDeath(PlayerDeathEvent e) {
+        Player player = e.getEntity();
+        player.sendMessage("Death Event Triggered");
+    }
+
     ///////////////////////////////////////////////////////////////////////////////////////////////////////
     //the action function performs player based actions such as attacks or assist moves
     ///////////////////////////////////////////////////////////////////////////////////////////////////////
