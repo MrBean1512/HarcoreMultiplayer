@@ -4,4 +4,6 @@ Minecraft plugin designed to automate hardcore multiplayer worlds to restart the
 
 ##Specification outline
 Spigot
-built using java and python
+Built primarily using java and python
+
+refer to nathan's fork for more details
