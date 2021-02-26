@@ -2,6 +2,8 @@
     "installed_version": 0,
     "server_path": "",
     "plugin_path": "",
+    "world_name": "Crinkle_Deathworld",
+    "world_line": 0,
     "death_count": 0,
     "death_events": []
 }
